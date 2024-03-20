@@ -1,0 +1,4 @@
+ОТВЕТ ОТ СЕРВЕРА: {"bookingid":2,"booking":{"bookingid":2,"roomid":1,"firstname":"Борис","lastname":"Сумин","depositpaid":false,"bookingdates":{"checkin":"2025-05-01","checkout":"2025-05-09"}}}
+Статус код: 201
+ВCЕ ОБЯЗАТЕЛЬНЫЕ ПОЛЯ ПРИСУТСТВУЮТ В ОТВЕТЕ
+

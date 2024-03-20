@@ -1,0 +1,91 @@
+
+-----
+Test: tests/test_shady_meadows.py::Test_Shady_Meadows::test_send_msg (call)
+Time: 2024-03-20 11:59:20.778970
+Request URL: https://automationintesting.online/message/
+Request method: POST
+
+Status code: 201
+Status text: {"messageid":2,"name":"Борис","email":"mtk26@bk.ru","phone":"89888486536","subject":"Бронирование номера","description":"Здравствуйте, планируем бронировать номер вашего отеля. Предоставьте пожалуйста прайс"}
+Response cookies: {}
+Response headers: {'Date': 'Wed, 20 Mar 2024 08:59:20 GMT', 'Content-Type': 'application/json', 'Transfer-Encoding': 'chunked', 'Connection': 'keep-alive', 'CF-Cache-Status': 'DYNAMIC', 'Report-To': '{"endpoints":[{"url":"https:\\/\\/a.nel.cloudflare.com\\/report\\/v4?s=gyoRISp3E%2FGJTRLsjijixxAAaLRyhRLjZiuwjCq%2B0rABbY1RBWdGy0mH0siDhJ1Pk3CorPtQAwKuAoHjQjJHeoQF1R9Z7Igf4F89aBzG43z5xGytFZi3CzOZTcSCU1ThyRLehvgYk4bWCaCEIKr5tvI0vSzukMdpFw%3D%3D"}],"group":"cf-nel","max_age":604800}', 'NEL': '{"success_fraction":0,"report_to":"cf-nel","max_age":604800}', 'Server': 'cloudflare', 'CF-RAY': '8674816e19169158-FRA', 'alt-svc': 'h3=":443"; ma=86400'}
+
+-----
+
+-----
+Test: tests/test_shady_meadows.py::Test_Shady_Meadows::test_booking_room (call)
+Time: 2024-03-20 11:59:21.796691
+Request URL: https://automationintesting.online/booking/
+Request method: POST
+
+Status code: 201
+Status text: {"bookingid":2,"booking":{"bookingid":2,"roomid":1,"firstname":"Борис","lastname":"Сумин","depositpaid":false,"bookingdates":{"checkin":"2025-05-01","checkout":"2025-05-09"}}}
+Response cookies: {}
+Response headers: {'Date': 'Wed, 20 Mar 2024 08:59:21 GMT', 'Content-Type': 'application/json', 'Transfer-Encoding': 'chunked', 'Connection': 'keep-alive', 'CF-Cache-Status': 'DYNAMIC', 'Report-To': '{"endpoints":[{"url":"https:\\/\\/a.nel.cloudflare.com\\/report\\/v4?s=dV%2FKzrYz9YQkZ%2F2WwgzbTGkIXQKRAH1TR%2Bbd9pa6t3QyJaQWoi%2FlLUH0I0ZVixU%2FBwC6dn%2BZBx92%2FjBWp84zg7BmyW3hBsymk13KT8ZAkFvDtQw1Dn2g%2BZfWGxSe8TuuIN3mc9SIb8r3lhXZJJMEioclav%2BjdSDPsw%3D%3D"}],"group":"cf-nel","max_age":604800}', 'NEL': '{"success_fraction":0,"report_to":"cf-nel","max_age":604800}', 'Server': 'cloudflare', 'CF-RAY': '86748172cf1791e3-FRA', 'alt-svc': 'h3=":443"; ma=86400'}
+
+-----
+
+-----
+Test: tests/test_shady_meadows.py::Test_Shady_Meadows::test_negative_send_msg (call)
+Time: 2024-03-20 11:59:22.677158
+Request URL: https://automationintesting.online/message/
+Request method: POST
+
+Status code: 400
+Status text: {"errorCode":400,"error":"BAD_REQUEST","errorMessage":"Validation failed for argument [0] in public org.springframework.http.ResponseEntity<com.automationintesting.model.db.Message> com.automationintesting.api.MessageController.createMessage(com.automationintesting.model.db.Message) throws java.sql.SQLException: [Field error in object 'message' on field 'name': rejected value []; codes [NotBlank.message.name,NotBlank.name,NotBlank.java.lang.String,NotBlank]; arguments [org.springframework.context.support.DefaultMessageSourceResolvable: codes [message.name,name]; arguments []; default message [name]]; default message [Name may not be blank]] ","fieldErrors":["Name may not be blank"]}
+Response cookies: {}
+Response headers: {'Date': 'Wed, 20 Mar 2024 08:59:22 GMT', 'Content-Type': 'application/json', 'Transfer-Encoding': 'chunked', 'Connection': 'keep-alive', 'CF-Cache-Status': 'DYNAMIC', 'Report-To': '{"endpoints":[{"url":"https:\\/\\/a.nel.cloudflare.com\\/report\\/v4?s=RejxJ1FRHUhozJnHaH5qTHa2FbXSg24SOxwqjHOIT5PslnaAThzK7DuB4Gv2%2BIivpOcXsdARSYcC1he%2FXcTYSDT3Q3Vs1tQDksp%2BsNA%2BudBjjOHmrub79d8U3zhyKCB1E2hfgWbhS6vsL1AWmYdqDbctyob71rQ1aQ%3D%3D"}],"group":"cf-nel","max_age":604800}', 'NEL': '{"success_fraction":0,"report_to":"cf-nel","max_age":604800}', 'Server': 'cloudflare', 'CF-RAY': '867481784d2b5d4c-FRA', 'alt-svc': 'h3=":443"; ma=86400'}
+
+-----
+
+-----
+Test: tests/test_shady_meadows.py::Test_Shady_Meadows::test_negative_send_msg (call)
+Time: 2024-03-20 11:59:23.412774
+Request URL: https://automationintesting.online/message/
+Request method: POST
+
+Status code: 400
+Status text: {"errorCode":400,"error":"BAD_REQUEST","errorMessage":"Validation failed for argument [0] in public org.springframework.http.ResponseEntity<com.automationintesting.model.db.Message> com.automationintesting.api.MessageController.createMessage(com.automationintesting.model.db.Message) throws java.sql.SQLException with 2 errors: [Field error in object 'message' on field 'email': rejected value []; codes [NotBlank.message.email,NotBlank.email,NotBlank.java.lang.String,NotBlank]; arguments [org.springframework.context.support.DefaultMessageSourceResolvable: codes [message.email,email]; arguments []; default message [email]]; default message [Email may not be blank]] [Field error in object 'message' on field 'name': rejected value []; codes [NotBlank.message.name,NotBlank.name,NotBlank.java.lang.String,NotBlank]; arguments [org.springframework.context.support.DefaultMessageSourceResolvable: codes [message.name,name]; arguments []; default message [name]]; default message [Name may not be blank]] ","fieldErrors":["Email may not be blank","Name may not be blank"]}
+Response cookies: {}
+Response headers: {'Date': 'Wed, 20 Mar 2024 08:59:23 GMT', 'Content-Type': 'application/json', 'Transfer-Encoding': 'chunked', 'Connection': 'keep-alive', 'CF-Cache-Status': 'DYNAMIC', 'Report-To': '{"endpoints":[{"url":"https:\\/\\/a.nel.cloudflare.com\\/report\\/v4?s=LQ7XR5b45opHEHKoJsjqflxnwlbTyPvIWDYNmz644sKgi7r3nSO%2FxGAU5BJQXVjEu9v6EZfCvJCnKV1Vyb6LS8ZMS%2Bpq5m4jnS53eZs1bUh3Dmw91mdxD1qvOvWromUObx%2BvoG6Ed08iSmfcU%2FLO7PZQTiWkdK%2Bnxw%3D%3D"}],"group":"cf-nel","max_age":604800}', 'NEL': '{"success_fraction":0,"report_to":"cf-nel","max_age":604800}', 'Server': 'cloudflare', 'CF-RAY': '8674817cd99791e3-FRA', 'alt-svc': 'h3=":443"; ma=86400'}
+
+-----
+
+-----
+Test: tests/test_shady_meadows.py::Test_Shady_Meadows::test_negative_send_msg (call)
+Time: 2024-03-20 11:59:24.145159
+Request URL: https://automationintesting.online/message/
+Request method: POST
+
+Status code: 400
+Status text: {"errorCode":400,"error":"BAD_REQUEST","errorMessage":"Validation failed for argument [0] in public org.springframework.http.ResponseEntity<com.automationintesting.model.db.Message> com.automationintesting.api.MessageController.createMessage(com.automationintesting.model.db.Message) throws java.sql.SQLException with 4 errors: [Field error in object 'message' on field 'email': rejected value []; codes [NotBlank.message.email,NotBlank.email,NotBlank.java.lang.String,NotBlank]; arguments [org.springframework.context.support.DefaultMessageSourceResolvable: codes [message.email,email]; arguments []; default message [email]]; default message [Email may not be blank]] [Field error in object 'message' on field 'phone': rejected value []; codes [Size.message.phone,Size.phone,Size.java.lang.String,Size]; arguments [org.springframework.context.support.DefaultMessageSourceResolvable: codes [message.phone,phone]; arguments []; default message [phone],21,11]; default message [Phone must be between 11 and 21 characters.]] [Field error in object 'message' on field 'phone': rejected value []; codes [NotBlank.message.phone,NotBlank.phone,NotBlank.java.lang.String,NotBlank]; arguments [org.springframework.context.support.DefaultMessageSourceResolvable: codes [message.phone,phone]; arguments []; default message [phone]]; default message [Phone may not be blank]] [Field error in object 'message' on field 'name': rejected value []; codes [NotBlank.message.name,NotBlank.name,NotBlank.java.lang.String,NotBlank]; arguments [org.springframework.context.support.DefaultMessageSourceResolvable: codes [message.name,name]; arguments []; default message [name]]; default message [Name may not be blank]] ","fieldErrors":["Email may not be blank","Phone must be between 11 and 21 characters.","Phone may not be blank","Name may not be blank"]}
+Response cookies: {}
+Response headers: {'Date': 'Wed, 20 Mar 2024 08:59:23 GMT', 'Content-Type': 'application/json', 'Transfer-Encoding': 'chunked', 'Connection': 'keep-alive', 'CF-Cache-Status': 'DYNAMIC', 'Report-To': '{"endpoints":[{"url":"https:\\/\\/a.nel.cloudflare.com\\/report\\/v4?s=%2FU%2F2nFpMQPeHvt7rFQREDWx%2F1LPWYEw%2BUSYOU32xATneO40uUMQ3sMRD51Dp%2FKaywKNQkStVVj2VJQvJ4cn26laLd4Yq74pXANPewDFFcBf4odDCXouETtiJKnhnDc%2B1QyXUljgmRNmK%2Fxs1IvO4Z0540YsTVnsr4A%3D%3D"}],"group":"cf-nel","max_age":604800}', 'NEL': '{"success_fraction":0,"report_to":"cf-nel","max_age":604800}', 'Server': 'cloudflare', 'CF-RAY': '867481818ae83a54-FRA', 'alt-svc': 'h3=":443"; ma=86400'}
+
+-----
+
+-----
+Test: tests/test_shady_meadows.py::Test_Shady_Meadows::test_negative_send_msg (call)
+Time: 2024-03-20 11:59:24.897294
+Request URL: https://automationintesting.online/message/
+Request method: POST
+
+Status code: 400
+Status text: {"errorCode":400,"error":"BAD_REQUEST","errorMessage":"Validation failed for argument [0] in public org.springframework.http.ResponseEntity<com.automationintesting.model.db.Message> com.automationintesting.api.MessageController.createMessage(com.automationintesting.model.db.Message) throws java.sql.SQLException with 6 errors: [Field error in object 'message' on field 'subject': rejected value []; codes [Size.message.subject,Size.subject,Size.java.lang.String,Size]; arguments [org.springframework.context.support.DefaultMessageSourceResolvable: codes [message.subject,subject]; arguments []; default message [subject],100,5]; default message [Subject must be between 5 and 100 characters.]] [Field error in object 'message' on field 'phone': rejected value []; codes [Size.message.phone,Size.phone,Size.java.lang.String,Size]; arguments [org.springframework.context.support.DefaultMessageSourceResolvable: codes [message.phone,phone]; arguments []; default message [phone],21,11]; default message [Phone must be between 11 and 21 characters.]] [Field error in object 'message' on field 'email': rejected value []; codes [NotBlank.message.email,NotBlank.email,NotBlank.java.lang.String,NotBlank]; arguments [org.springframework.context.support.DefaultMessageSourceResolvable: codes [message.email,email]; arguments []; default message [email]]; default message [Email may not be blank]] [Field error in object 'message' on field 'phone': rejected value []; codes [NotBlank.message.phone,NotBlank.phone,NotBlank.java.lang.String,NotBlank]; arguments [org.springframework.context.support.DefaultMessageSourceResolvable: codes [message.phone,phone]; arguments []; default message [phone]]; default message [Phone may not be blank]] [Field error in object 'message' on field 'subject': rejected value []; codes [NotBlank.message.subject,NotBlank.subject,NotBlank.java.lang.String,NotBlank]; arguments [org.springframework.context.support.DefaultMessageSourceResolvable: codes [message.subject,subject]; arguments []; default message [subject]]; default message [Subject may not be blank]] [Field error in object 'message' on field 'name': rejected value []; codes [NotBlank.message.name,NotBlank.name,NotBlank.java.lang.String,NotBlank]; arguments [org.springframework.context.support.DefaultMessageSourceResolvable: codes [message.name,name]; arguments []; default message [name]]; default message [Name may not be blank]] ","fieldErrors":["Subject must be between 5 and 100 characters.","Phone must be between 11 and 21 characters.","Email may not be blank","Phone may not be blank","Subject may not be blank","Name may not be blank"]}
+Response cookies: {}
+Response headers: {'Date': 'Wed, 20 Mar 2024 08:59:24 GMT', 'Content-Type': 'application/json', 'Transfer-Encoding': 'chunked', 'Connection': 'keep-alive', 'CF-Cache-Status': 'DYNAMIC', 'Report-To': '{"endpoints":[{"url":"https:\\/\\/a.nel.cloudflare.com\\/report\\/v4?s=a%2BRaAeezLgmVpNPSBSetixmwm8eAC84jdfZ6IsYEyFct9ZBHXS1FCGKvL3rXGdKM4EBWvCOa%2BjGsFIA1nj6eGU3INV4eTBz3zoI1CfeqUvmy9FNh3IRsYtHo0Ts8KHhPyZG1CxhdqcQ8Ol86qEIQSTdCBrAfE7OGDA%3D%3D"}],"group":"cf-nel","max_age":604800}', 'NEL': '{"success_fraction":0,"report_to":"cf-nel","max_age":604800}', 'Server': 'cloudflare', 'CF-RAY': '867481862f0d4da0-FRA', 'alt-svc': 'h3=":443"; ma=86400'}
+
+-----
+
+-----
+Test: tests/test_shady_meadows.py::Test_Shady_Meadows::test_negative_send_msg (call)
+Time: 2024-03-20 11:59:25.635698
+Request URL: https://automationintesting.online/message/
+Request method: POST
+
+Status code: 400
+Status text: {"errorCode":400,"error":"BAD_REQUEST","errorMessage":"Validation failed for argument [0] in public org.springframework.http.ResponseEntity<com.automationintesting.model.db.Message> com.automationintesting.api.MessageController.createMessage(com.automationintesting.model.db.Message) throws java.sql.SQLException with 8 errors: [Field error in object 'message' on field 'phone': rejected value []; codes [NotBlank.message.phone,NotBlank.phone,NotBlank.java.lang.String,NotBlank]; arguments [org.springframework.context.support.DefaultMessageSourceResolvable: codes [message.phone,phone]; arguments []; default message [phone]]; default message [Phone may not be blank]] [Field error in object 'message' on field 'description': rejected value []; codes [Size.message.description,Size.description,Size.java.lang.String,Size]; arguments [org.springframework.context.support.DefaultMessageSourceResolvable: codes [message.description,description]; arguments []; default message [description],2000,20]; default message [Message must be between 20 and 2000 characters.]] [Field error in object 'message' on field 'description': rejected value []; codes [NotBlank.message.description,NotBlank.description,NotBlank.java.lang.String,NotBlank]; arguments [org.springframework.context.support.DefaultMessageSourceResolvable: codes [message.description,description]; arguments []; default message [description]]; default message [Message may not be blank]] [Field error in object 'message' on field 'phone': rejected value []; codes [Size.message.phone,Size.phone,Size.java.lang.String,Size]; arguments [org.springframework.context.support.DefaultMessageSourceResolvable: codes [message.phone,phone]; arguments []; default message [phone],21,11]; default message [Phone must be between 11 and 21 characters.]] [Field error in object 'message' on field 'email': rejected value []; codes [NotBlank.message.email,NotBlank.email,NotBlank.java.lang.String,NotBlank]; arguments [org.springframework.context.support.DefaultMessageSourceResolvable: codes [message.email,email]; arguments []; default message [email]]; default message [Email may not be blank]] [Field error in object 'message' on field 'subject': rejected value []; codes [NotBlank.message.subject,NotBlank.subject,NotBlank.java.lang.String,NotBlank]; arguments [org.springframework.context.support.DefaultMessageSourceResolvable: codes [message.subject,subject]; arguments []; default message [subject]]; default message [Subject may not be blank]] [Field error in object 'message' on field 'name': rejected value []; codes [NotBlank.message.name,NotBlank.name,NotBlank.java.lang.String,NotBlank]; arguments [org.springframework.context.support.DefaultMessageSourceResolvable: codes [message.name,name]; arguments []; default message [name]]; default message [Name may not be blank]] [Field error in object 'message' on field 'subject': rejected value []; codes [Size.message.subject,Size.subject,Size.java.lang.String,Size]; arguments [org.springframework.context.support.DefaultMessageSourceResolvable: codes [message.subject,subject]; arguments []; default message [subject],100,5]; default message [Subject must be between 5 and 100 characters.]] ","fieldErrors":["Phone may not be blank","Message must be between 20 and 2000 characters.","Message may not be blank","Phone must be between 11 and 21 characters.","Email may not be blank","Subject may not be blank","Name may not be blank","Subject must be between 5 and 100 characters."]}
+Response cookies: {}
+Response headers: {'Date': 'Wed, 20 Mar 2024 08:59:25 GMT', 'Content-Type': 'application/json', 'Transfer-Encoding': 'chunked', 'Connection': 'keep-alive', 'CF-Cache-Status': 'DYNAMIC', 'Report-To': '{"endpoints":[{"url":"https:\\/\\/a.nel.cloudflare.com\\/report\\/v4?s=KvOAT0h6LK2MBdP7TV11N2%2BdsMNfuMOX%2Fzmiuw1yqDExW725TGb%2FCagUtkK4r8sVwfxcvfxTsuiEIq6PB6LQCy2bHd9MtxfozBxC23uzK4blTtg0Q9%2F7kUrmSUEsMvHDgvys%2FSuGxjSVE9AT%2FDOFqSPgEOndb42X9w%3D%3D"}],"group":"cf-nel","max_age":604800}', 'NEL': '{"success_fraction":0,"report_to":"cf-nel","max_age":604800}', 'Server': 'cloudflare', 'CF-RAY': '8674818ae8592280-CDG', 'alt-svc': 'h3=":443"; ma=86400'}
+
+-----

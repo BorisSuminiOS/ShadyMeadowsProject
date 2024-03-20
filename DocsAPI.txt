@@ -1,0 +1,56 @@
+Примечание: Один запрос и ответ от сервера кратно одной страницы А4
+
+
+Документация Shady Meadows API. 
+Метод POST |  Отправка письма сотрудникам отеля
+Запрос:
+Base URL: https://automationintesting.online
+Resource: /message/
+Body:
+{
+"name" : “Борис”,
+"email" : ” mtk26@bk.ru",
+“phone" : “89888486536”,
+"subject" : ” fake@fakeemail.com”,
+"description": “Здравствуйте, планируем бронировать номер вашего отеля. Предоставьте пожалуйста прайс”
+} 
+ Ответ:
+Статус: 201.  Запрос прошел успешно
+{
+"messageid": 2,
+"name":"Борис Сумин",
+"email":"mtk26@bk.ru",
+"phone":"89888486536",
+"subject":"Бронирование номера",
+"description": “Здравствуйте, планируем бронировать номер вашего отеля. Предоставьте пожалуйста прайс”
+}
+
+__________________________________________________________________________________________________________________
+
+Метод POST |  Бронирование номера
+Запрос:
+Base URL: https://automationintesting.online
+Resource: /booking/
+Body:
+{
+"bookingdates": {"checkin":"2024-03-01","checkout":"2024-03-09"},
+"depositpaid": False,
+"firstname":"Борис",
+"lastname":"Сумин",
+"roomid":1,
+"email":"mtk26@bk.ru",
+"phone":"89888486536"
+}
+ Ответ:
+Статус: 201.  Запрос прошел успешно
+{
+"bookingid":2,
+"booking":{
+"bookingid":2,"roomid":1,"firstname":"Борис","lastname":"Сумин","depositpaid":false,"bookingdates":{
+"checkin":"2024-03-01","checkout":"2024-03-09"}
+}
+}
+
+
+
+
